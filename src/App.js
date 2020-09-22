@@ -15,11 +15,6 @@ function App() {
     setBottom(e.currentTarget.value);
   }
 
-  fetch('https://api.memegen.link/images/')
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.log('ERROR'));
-
   const memeNames = [
     'tenguy',
     'afraid',
@@ -153,9 +148,7 @@ function App() {
     'chosen',
   ];
 
-  const link = 'https://api.memegen.link/images/';
-
-  const img = `${link}${memeChoice}/${top}/${bottom}/.png?watermark=none`;
+  const img = `https://api.memegen.link/images/${memeChoice}/${top}/${bottom}/.png?watermark=none`;
 
   return (
     <div className="App">
@@ -164,7 +157,7 @@ function App() {
 
         {/* /* Dropdown Menu */}
         <form>
-          <h3>Choose a meme:</h3>
+          <h3>Choose your meme:</h3>
 
           <select
             value={memeChoice}
@@ -184,7 +177,6 @@ function App() {
         </form>
         <p>
           <img className="meme" src={img} alt="a random Meme" />
-          {/* <alert>{img}</alert> */}
         </p>
         <p>
           <h3>Customize your meme:</h3>

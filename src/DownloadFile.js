@@ -8,7 +8,7 @@ class DownloadFile extends React.Component {
   }
 
   downloadFile = (props) => {
-    fetch(props.img).then((response) => {
+    fetch(this.props.img).then((response) => {
       response.blob().then((blob) => {
         let url = window.URL.createObjectURL(blob);
         let a = document.createElement('a');
@@ -22,7 +22,7 @@ class DownloadFile extends React.Component {
   render() {
     return (
       <div id="container">
-        <button onClick={this.downloadFile}>Download Meme</button>
+        <button onClick={this.downloadFile}>Download your meme</button>
         <p />
       </div>
     );
