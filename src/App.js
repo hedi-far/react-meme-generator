@@ -163,32 +163,29 @@ function App() {
         <h1>React Meme Generator</h1>
 
         {/* /* Dropdown Menu */}
-        <label>Choose a meme:</label>
-
         <form>
-          <label>
-            Pick your meme:
-            <select
-              value={memeChoice}
-              onChange={(e) => {
-                setMemeChoice(e.currentTarget.value);
-              }}
-            >
-              {' '}
-              {memeNames.map(function (item, index) {
-                return (
-                  <option value={item} key={index}>
-                    {item}
-                  </option>
-                );
-              })}
-            </select>
-          </label>
+          <h3>Choose a meme:</h3>
+
+          <select
+            value={memeChoice}
+            onChange={(e) => {
+              setMemeChoice(e.currentTarget.value);
+            }}
+          >
+            {' '}
+            {memeNames.map(function (item, index) {
+              return (
+                <option value={item} key={index}>
+                  {item}
+                </option>
+              );
+            })}
+          </select>
         </form>
-
-        <div>Names</div>
-        <img className="meme" src={img} alt="a random Meme" />
-
+        <p>
+          <img className="meme" src={img} alt="a random Meme" />
+          {/* <alert>{img}</alert> */}
+        </p>
         <p>
           <h3>Customize your meme:</h3>
           <label>Top </label>

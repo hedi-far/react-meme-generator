@@ -3,12 +3,12 @@ import React from 'react';
 class DownloadFile extends React.Component {
   constructor(props) {
     super(props);
+
+    console.log(props.img);
   }
 
-  downloadEmployeeData = () => {
-    fetch(
-      'https://api.memegen.link/images/aag/ge/gds/_.png?watermark=none',
-    ).then((response) => {
+  downloadFile = (props) => {
+    fetch(props.img).then((response) => {
       response.blob().then((blob) => {
         let url = window.URL.createObjectURL(blob);
         let a = document.createElement('a');
@@ -16,14 +16,13 @@ class DownloadFile extends React.Component {
         a.download = 'meme';
         a.click();
       });
-      //window.location.href = response.url;
     });
   };
 
   render() {
     return (
       <div id="container">
-        <button onClick={this.downloadEmployeeData}>Download Meme</button>
+        <button onClick={this.downloadFile}>Download Meme</button>
         <p />
       </div>
     );
