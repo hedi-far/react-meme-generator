@@ -4,4 +4,10 @@ With this React application, you can edit text to a meme from [memegen.link](htt
 
 ![Screenshot](./screenshot.jpg)
 
+## Codesandbox
+
+[Find the project on CodeSandbox](https://codesandbox.io/s/react-meme-generator-d6tge)
+
+## Instructions
+
 Please run `yarn start` to start the application.

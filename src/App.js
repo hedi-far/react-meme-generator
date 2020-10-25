@@ -152,44 +152,34 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>React Meme Generator</h1>
-
+      <h1>React Meme Generator</h1>
+      <img src={img} alt="a random Meme" />
+      <div className="meme">
         {/* /* Dropdown Menu */}
-        <form>
-          <h3>Choose your meme:</h3>
+        <h3>Choose your meme:</h3>
 
-          <select
-            value={memeChoice}
-            onChange={(e) => {
-              setMemeChoice(e.currentTarget.value);
-            }}
-          >
-            {' '}
-            {memeNames.map(function (item, index) {
-              return (
-                <option value={item} key={index}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
-        </form>
-        <p>
-          <img className="meme" src={img} alt="a random Meme" />
-        </p>
-        <p>
-          <h3>Customize your meme:</h3>
-          <label>Top </label>
-          <input value={top} onChange={handleSubmitTop}></input>
-          <br />
-          <label>Bottom </label>
-          <input onChange={handleSubmitBottom}></input>
-        </p>
-        <p>
-          <DownloadFile img={img} />
-        </p>
-      </header>
+        <select
+          value={memeChoice}
+          onChange={(e) => {
+            setMemeChoice(e.currentTarget.value);
+          }}
+        >
+          {' '}
+          {memeNames.map(function (item, index) {
+            return (
+              <option value={item} key={index}>
+                {item}
+              </option>
+            );
+          })}
+        </select>
+
+        <h3>Customize your meme:</h3>
+        <input placeholder="Top line" onChange={handleSubmitTop}></input>
+        <br />
+        <input placeholder="Bottom line" onChange={handleSubmitBottom}></input>
+        <DownloadFile img={img} />
+      </div>
     </div>
   );
 }
