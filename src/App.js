@@ -148,7 +148,7 @@ function App() {
     'chosen',
   ];
 
-  const img = `https://api.memegen.link/images/${memeChoice}/${top}/${bottom}/.png?watermark=none`;
+  const img = `https://api.memegen.link/images/${memeChoice}/${top}/${bottom}/`;
 
   return (
     <div className="App">
@@ -164,7 +164,6 @@ function App() {
             setMemeChoice(e.currentTarget.value);
           }}
         >
-          {' '}
           {memeNames.map(function (item, index) {
             return (
               <option value={item} key={index}>
@@ -175,9 +174,9 @@ function App() {
         </select>
 
         <h3>Customize your meme:</h3>
-        <input placeholder="Top line" onChange={handleSubmitTop}></input>
+        <input placeholder="Top line" onChange={handleSubmitTop} />
         <br />
-        <input placeholder="Bottom line" onChange={handleSubmitBottom}></input>
+        <input placeholder="Bottom line" onChange={handleSubmitBottom} />
         <DownloadFile img={img} />
       </div>
     </div>
