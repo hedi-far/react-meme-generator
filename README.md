@@ -6,7 +6,7 @@ With this React application, you can edit text to a meme from [memegen.link](htt
 
 ## Codesandbox
 
-[Find the project on CodeSandbox](https://codesandbox.io/s/react-meme-generator-d6tge)
+[Find the project on CodeSandbox](https://codesandbox.io/s/github/hedi-far/react-meme-generator)
 
 ## Instructions
 
