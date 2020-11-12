@@ -148,7 +148,9 @@ function App() {
     'chosen',
   ];
 
-  const img = `https://api.memegen.link/images/${memeChoice}/${top}/${bottom}/`;
+  // https://api.memegen.link/images/regret/a/b.png?watermark=none
+
+  const img = `https://api.memegen.link/images/${memeChoice}/${top}/${bottom}.png?watermark=none`;
 
   return (
     <div className="App">
